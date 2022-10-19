@@ -1,8 +1,46 @@
+// My Functions
+// Add
+function addNumbersNew() {
+    number1 = parseFloat(document.getElementById('addend1New').value);
+    number2 = parseFloat(document.getElementById('addend2New').value);
+    document.getElementById('sumNew').innerHTML = number1 + number2;
+}
+document.getElementById('addNumbersNew').addEventListener('click', addNumbersNew);
+
+
+// Subtract
+function subtractNumbersNew() {
+    number1 = parseFloat(document.getElementById('minuendNew').value);
+    number2 = parseFloat(document.getElementById('subtrahendNew').value);
+    document.getElementById('differenceNew').innerHTML = number1 - number2;
+}
+document.getElementById('subtractNumbersNew').addEventListener('click', subtractNumbersNew);
+
+
+// Multiply with arrow functions and querySelectors
+const multiplyNumbersNew = () => {
+    number1 = parseFloat(document.querySelector('#factor1New').value);
+    number2 = parseFloat(document.querySelector('#factor2New').value);
+    document.querySelector('#productNew').innerHTML = number1 * number2;
+}
+document.querySelector('#multiplyNumbersNew').addEventListener('click', multiplyNumbersNew);
+
+
+// Divide with arrow functions and querySelectors
+const divideNumbersNew = () => {
+    number1 = parseFloat(document.querySelector('#dividendNew').value);
+    number2 = parseFloat(document.querySelector('#divisorNew').value);
+    document.querySelector('#quotientNew').innerHTML = number1 / number2;
+}
+document.querySelector('#divideNumbersNew').addEventListener('click', divideNumbersNew);
+
+
+
 // Add
 function addNumbers() {
     number1 = parseFloat(document.getElementById('addend1').value);
     number2 = parseFloat(document.getElementById('addend2').value);
-    document.getElementById('sum').innerHTML = number1 + number2;
+    document.getElementById('sum').value = number1 + number2;
 }
 document.getElementById('addNumbers').addEventListener('click', addNumbers);
 
@@ -11,7 +49,7 @@ document.getElementById('addNumbers').addEventListener('click', addNumbers);
 function subtractNumbers() {
     number1 = parseFloat(document.getElementById('minuend').value);
     number2 = parseFloat(document.getElementById('subtrahend').value);
-    document.getElementById('difference').innerHTML = number1 - number2;
+    document.getElementById('difference').value = number1 - number2;
 }
 document.getElementById('subtractNumbers').addEventListener('click', subtractNumbers);
 
@@ -20,7 +58,7 @@ document.getElementById('subtractNumbers').addEventListener('click', subtractNum
 const multiplyNumbers = () => {
     number1 = parseFloat(document.querySelector('#factor1').value);
     number2 = parseFloat(document.querySelector('#factor2').value);
-    document.querySelector('#product').innerHTML = number1 * number2;
+    document.querySelector('#product').value = number1 * number2;
 }
 document.querySelector('#multiplyNumbers').addEventListener('click', multiplyNumbers);
 
@@ -29,7 +67,7 @@ document.querySelector('#multiplyNumbers').addEventListener('click', multiplyNum
 const divideNumbers = () => {
     number1 = parseFloat(document.querySelector('#dividend').value);
     number2 = parseFloat(document.querySelector('#divisor').value);
-    document.querySelector('#quotient').innerHTML = number1 / number2;
+    document.querySelector('#quotient').value = number1 / number2;
 }
 document.querySelector('#divideNumbers').addEventListener('click', divideNumbers);
 
